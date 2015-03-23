@@ -5,6 +5,6 @@ from django.http import HttpResponse, HttpResponseNotFound
 def contentapp(request, recurso): 
     try:
         nombre = Pages.objects.get(name=recurso)
-        return HttpResponse("<h1>" + nombre.page + "</h1>")
+        return HttpResponse("<h1> YOLO " + nombre.page + "</h1>")
     except Pages.DoesNotExist:
         return HttpResponseNotFound("Pagina no encontrada")
